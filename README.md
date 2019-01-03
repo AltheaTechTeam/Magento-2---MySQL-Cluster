@@ -1,13 +1,14 @@
 ## Skynix Magento 2 MySQL Cluster
 # Installation Instructions
 
-1. composer require skynix/m2-mysql-cluster
+1. composer require altheatech/m2-mysql-cluster
 2. add configuration into app/etc/env.php
 
 Section db -> connection -> default
 
 add a new section:
 
+```
 'slave-servers' =>
    [
       0 =>
@@ -22,6 +23,7 @@ add a new section:
                           'active' => '1',
            ]
    ]
+```
 
 Add there as many slave servers as you have.
 
