@@ -306,7 +306,7 @@ class Mysql extends \Zend_Db_Adapter_Pdo_Mysql implements AdapterInterface
 	if ( php_sapi_name() != 'cli' && isset($_SERVER['REQUEST_URI']) ) {
 	// althea : 
 	// - add admin exception to read only request	
-        $exceptions = ['customer', 'checkout', 'admin'];
+        $exceptions = ['customer', 'checkout'];
         foreach ( $exceptions as $e ) {
 
             if ( strstr($_SERVER['REQUEST_URI'], $e) !== false) {
